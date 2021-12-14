@@ -15,10 +15,11 @@ namespace DosTest3.Controllers
 {
     public class HomeController : Controller
     {
+        ApplicationContext _context;
+        IWebHostEnvironment _appEnvironment;
 
-        /*
         private readonly ILogger<HomeController> _logger;
-
+        
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -28,21 +29,18 @@ namespace DosTest3.Controllers
         {
             return View();
         }
-        */
-
-        ApplicationContext _context;
-        IWebHostEnvironment _appEnvironment;
-
-        public HomeController(ApplicationContext context, IWebHostEnvironment appEnvironment)
+        
+       /* public HomeController(ApplicationContext context, IWebHostEnvironment appEnvironment)
         {
             _context = context;
             _appEnvironment = appEnvironment;
-        }
+        }*/
 
-        public IActionResult Index()
+        /*public IActionResult Index()
         {
             return View(_context.Files.ToList());
-        }
+        }*/
+
         [HttpPost]
         public async Task<IActionResult> AddFile(IFormFile uploadedFile)
         {
