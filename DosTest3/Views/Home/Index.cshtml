@@ -2,15 +2,44 @@
 @{
     ViewData["Title"] = "Добавление файла";
 }
-<h3>Выберите файл для загрузки</h3>
-<form asp-action="AddFile" asp-controller="Home" method="post" enctype="multipart/form-data">
-    <input type="file" name="uploadedFile" /><br>
-    <input type="submit" value="Загрузить" />
-</form>
 
-<h3>Все файлы</h3>
+<div>
 
-@*@foreach (var f in Model)
-{
-    <p><img src="@Url.Content(f.Path)"></p>
-}*@
+    <h3>Выберите файл для загрузки</h3>
+    <form asp-action="AddFile" asp-controller="Home" method="post" enctype="multipart/form-data">
+        <input type="file" name="uploadedFile" /><br>
+        <input type="submit" value="Загрузить" />
+    </form>
+</div>
+
+<div>
+
+    <table width="100%" cellspacing="0" cellpadding="5"  id="maket">
+        <tr>
+            <td id="leftcol" 
+                width="600" 
+                valign="top">
+
+                <h3> Содержимое файла </h3>
+                <div>
+
+                </div>
+
+            </td>
+
+            <td id="spacer"></td>
+
+            <td id="rightcol"
+                valign="top">
+                <h3>Все файлы</h3>
+                <div>
+                    @*@foreach (var f in Model)
+                    {
+                      <p><img src="@Url.Content(f.Path)"></p>
+                    }*@
+
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

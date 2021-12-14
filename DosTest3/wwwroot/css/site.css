@@ -69,3 +69,26 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+#maket {
+    width: 100%; /* Ширина всей таблицы */
+}
+
+TD {
+    vertical-align: top; /* Вертикальное выравнивание в ячейках */
+    padding: 5px; /* Поля вокруг ячеек */
+}
+
+    TD#leftcol {
+        background: #ccc; /* Цвет фона левой колонки */
+        border: 1px solid #000; /* Параметры рамки */
+    }
+
+    TD#rightcol {
+        background: #fc3; /* Цвет фона правой колонки */
+        border: 1px solid #000; /* Параметры рамки */
+    }
+
+#spacer {
+    width: 10px; /* Расстояние между колонками */
+}

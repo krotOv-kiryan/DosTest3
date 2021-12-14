@@ -76,7 +76,7 @@ namespace DosTest3.Controllers
         public string Win1251ToUTF8(string source)
         {
 
-            string text = "Р—Р°РєР°Р· Р·РІРѕРЅРєР° С‚РµС…РЅРёС‡РµСЃРєРѕР№ РїРѕРґРґРµСЂР¶РєРё";
+            string text = "";
             Encoding utf8 = Encoding.GetEncoding("UTF-8");
             Encoding win1251 = Encoding.GetEncoding("Windows-1251");
 
