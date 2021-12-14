@@ -10,6 +10,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace DosTest3.Controllers
 {
@@ -58,7 +59,7 @@ namespace DosTest3.Controllers
                 _context.SaveChanges();
             }
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Index"); //
         }
     
         public IActionResult Privacy()
@@ -124,5 +125,7 @@ namespace DosTest3.Controllers
         {
          return source;
         }*/
+
+       
     }
 }
