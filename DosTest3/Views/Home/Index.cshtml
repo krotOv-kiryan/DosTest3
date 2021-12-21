@@ -4,7 +4,6 @@
 }
 
 <div>
-
     <h3>Выберите файл для загрузки</h3>
     <form asp-action="AddFile" asp-controller="Home" method="post" enctype="multipart/form-data">
         <input type="file" name="uploadedFile" /><br>
@@ -13,7 +12,6 @@
 </div>
 
 <div>
-
     <table width="100%" cellspacing="0" cellpadding="5"  id="maket">
         <tr>
             <td id="leftcol" 
@@ -21,20 +19,29 @@
                 valign="top">
 
                 <h3> Содержимое файла </h3>
+
                 <div>
                    
                 </div>
+
                 <div>
                     <h3>Конвертировать в </h3>
-                    <button type="button" action="" class="btn btn-primary">koi-8</button>
-                    <button type="button" action="" class="btn btn-primary">win-1251</button>
-                    <button type="button" action="" class="btn btn-primary">cp-886</button>
-                    <button type="button" action="" class="btn btn-primary">utf-8</button>
+                    <select code>
+                        <option value="s1" selected >utf-8</option>
+                        <option value="s2" code>    win-1251</option>
+                        <option value="s3" code>    cp-886</option>
+                        <option value="s4" code>    koi-8</option>
+                    </select>
+                    <button type="button" action="encoding" class="btn btn-primary"> Конвертировать</button>
+                     @*<button type="button" action="" class="btn btn-primary"></button>
+                      <button type="button" action="" class="btn btn-primary"></button>
+                      <button type="button" action="" class="btn btn-primary"></button>
+                      <button type="button" action="" class="btn btn-primary"></button>*@
+
                 </div>
             </td>
 
             <td id="spacer"></td>
-
 
             <td id="rightcol"
                 valign="top">
@@ -44,9 +51,9 @@
                     {
                       <p><img src="@Url.Content(f.Path)"></p>
                     }*@
-
                 </div>
             </td>
         </tr>
     </table>
+
 </div>
